@@ -7,3 +7,5 @@ elif year%4==0:
         print('不是闰年')
     else:
         print('闰年')
+else:
+    print('不是闰年')123
