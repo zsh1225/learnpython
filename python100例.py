@@ -115,18 +115,31 @@ from datetime import date
 mydate=date.today()
 print(calendar.calendar(2023))
 
-import matplotlib 
-matplotlib.__version__  # '2.2.2'
+# import matplotlib 
+# matplotlib.__version__  # '2.2.2'
 
 
-import matplotlib.pyplot as plt 
+# import matplotlib.pyplot as plt 
 
-import seaborn as sns 
-sns.__version__ # '0.8.0'
-sns.barplot(x=[0, 1, 2, 3, 4, 5],
-        y=[1.5, 1, -1.3, 0.7, 0.8, 0.9]
-        )
-sns.pointplot(x=[0, 1, 2, 3, 4, 5],
-        y=[2, 0.5, 0.7, -1.2, 0.3, 0.4]
-        )
-plt.show()
+# import seaborn as sns 
+# sns.__version__ # '0.8.0'
+# sns.barplot(x=[0, 1, 2, 3, 4, 5],
+#         y=[1.5, 1, -1.3, 0.7, 0.8, 0.9]
+#         )
+# sns.pointplot(x=[0, 1, 2, 3, 4, 5],
+#         y=[2, 0.5, 0.7, -1.2, 0.3, 0.4]
+#         )
+# plt.show()
+keys = ['a', 'b', 'c']
+values = [1, 3, 5]
+
+for k, v in zip(keys, values):
+    print(k, v)
+c=dict(zip(keys, values))
+print(c)
+for k, v in c.items():
+    print(k, v)
+
+x = map(lambda x:x**x, [1, 3, 5])
+for e in x:
+    print(e, type(e))
