@@ -46,5 +46,87 @@ class C(object):
     x = property(getx, setx, delx, "I'm the 'x' property.")
 c = C()
 # c.x = 10
-help(c)
-print(c)
+# help(c)
+# print(c)
+#转为集合
+a=[1,2,3,3,4,4,4,5,3]
+print(set(a))
+print(tuple(a))
+sorted(a)
+class A():
+    
+    def __init__(self):
+        self._y = None
+ 
+    def getx(self):
+        return self._y
+ 
+    def setx(self, value):
+        self._y = value
+ 
+    def delx(self):
+        del self._y
+    y = property(getx, setx, delx, "I'm the 'y' property.")
+    #迭代器
+    def __iter__(self):
+        #global a
+        print('__iter__ is called')
+        return iter(a)
+class B(A,C):
+    pass
+b=B()
+b.x=10
+b.y=20
+c=b.x+b.y
+print(b.x,b.y,c)
+for i in b:
+    print(i)
+print(1>2)
+# import time
+
+
+# # 测试的Def函数
+# def square1(n):
+#     return n ** 2
+
+
+# # 测试的Lambda函数
+# square2 = lambda n: n ** 2
+
+# print(time.time())
+
+# # 使用Def函数
+# i = 0
+# while i < 1000000000:
+#     square1(100)
+#     i += 1
+
+# print(time.time())
+
+# # 使用lambda函数
+# i = 0
+# while i < 1000000000:
+#     square2(100)
+#     i += 1
+
+# print(time.time())
+import calendar
+from datetime import date
+mydate=date.today()
+print(calendar.calendar(2023))
+
+import matplotlib 
+matplotlib.__version__  # '2.2.2'
+
+
+import matplotlib.pyplot as plt 
+
+import seaborn as sns 
+sns.__version__ # '0.8.0'
+sns.barplot(x=[0, 1, 2, 3, 4, 5],
+        y=[1.5, 1, -1.3, 0.7, 0.8, 0.9]
+        )
+sns.pointplot(x=[0, 1, 2, 3, 4, 5],
+        y=[2, 0.5, 0.7, -1.2, 0.3, 0.4]
+        )
+plt.show()
