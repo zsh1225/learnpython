@@ -10,5 +10,3 @@ class class_demo():
 ss=class_demo()
 print(ss.a)
 
-
-# print()
