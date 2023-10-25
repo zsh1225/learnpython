@@ -18,17 +18,19 @@
 # knights.index('we')
 # knights.index('we', 5)
 # knights[4] # see the difference
-a_list=[1,2,3,4,5]
-b_list=a_list[:]
-del a_list[0]
-del a_list
-print(b_list)
-class demo:
-    def __init__(self,num) -> None:
-        self.num=num
-def test(a,b):
-    a.num,b.num=b.num,a.num
-a=demo(1)
-b=demo(2)
-test(a,b)
-print(a.num,b.num)
+# a_list=[1,2,3,4,5]
+# b_list=a_list[:]
+# del a_list[0]
+# del a_list
+# print(b_list)
+# class demo:
+#     def __init__(self,num) -> None:
+#         self.num=num
+# def test(a,b):
+#     a.num,b.num=b.num,a.num
+# a=demo(1)
+# b=demo(2)
+# test(a,b)
+# print(a.num,b.num)
+line="werwwr"
+print(line,end='')
